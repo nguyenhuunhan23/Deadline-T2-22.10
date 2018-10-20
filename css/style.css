@@ -110,15 +110,6 @@ html, body {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Responsive */
 
 @media (max-width: 1600px) {
@@ -178,6 +169,10 @@ html, body {
 }
 
 @media (max-width: 1366px) {
+    .navbar-nav li {
+        font-size: 20px;
+        padding: 10px;
+    }
     /*Don't need to edit Image Slider */
     .row {
         width: 98.3%;
@@ -202,6 +197,10 @@ html, body {
 }
 
 @media (max-width: 1280px) {
+    .navbar-nav li {
+        font-size: 20px;
+        padding: 2px;
+    }
     .carousel-caption h1 {
         font-size: 400%;
         text-transform: uppercase;
@@ -231,7 +230,7 @@ html, body {
 
 @media (max-width: 1024px) {
     .navbar-nav li {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     input {
