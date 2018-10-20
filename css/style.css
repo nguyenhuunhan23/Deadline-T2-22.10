@@ -14,4 +14,9 @@ html, body {
     }
 }
 
-
+@media (max-width: 1600px) {
+    .navbar-nav li {
+        font-size: 22px;
+        padding-right: 38px;
+    }
+}
