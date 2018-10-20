@@ -14,6 +14,12 @@ html, body {
     width: 350px;
     font-size: 20px;
 }
+.fa-shopping-cart {
+    color: lightgrey;
+}
+.fa-shopping-cart:hover {
+    color: #444;
+}
 /*Image Slider */
 .carousel-item img {
     width: 98.3%;
