@@ -6,18 +6,48 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-@media (max-width: 1920px) {
     .navbar-nav li {
         font-size: 25px;
         padding-right: 40px;
     }
-}
+    .carousel-item img {
+        width: 98.3%;
+        margin-left: 16px;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%)
+    }
+    
+    .carousel-caption h1 {
+        font-size: 500%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+
+
+/* Responsive */
 
 @media (max-width: 1600px) {
     .navbar-nav li {
         font-size: 22px;
         padding-right: 38px;
+    }
+    .carousel-item img {
+        width: 97.5%;
+        margin-left: 16px;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%)
+    }
+    
+    .carousel-caption h1 {
+        font-size: 500%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
     }
 }
 
@@ -26,20 +56,24 @@ html, body {
         font-size: 20px;
         padding-right: 36px;
     }
+    /*Don't need to edit Image Slider */
 }
 
 @media (max-width: 1366px) {
-    
+    /*Don't need to edit Image Slider */
 }
 
 @media (max-width: 1280px) {
-    
+    .carousel-caption h1 {
+        font-size: 400%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
 }
 
 @media (max-width: 1024px) {
     .navbar-nav li {
-        font-size: 20px;
-        margin-top: 15px;
+        font-size: 15px;
     }
 
     input {
@@ -49,6 +83,22 @@ html, body {
     #search-box {
         width: 120px;
         font-size: 12px;
+    }
+
+    .carousel-item img {
+        width: 96.3%;
+        margin-left: 16px;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%)
+    }
+    
+    .carousel-caption h1 {
+        font-size: 300%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
     }
 }
 
@@ -65,6 +115,25 @@ html, body {
         font-size: 15px;
         margin-left: 30px;
     }
+
+    .carousel-caption h1 {
+        font-size: 250%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        width: 96%;
+        margin-left: 16px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 200%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
 }
 
 @media (max-width: 425px) {
@@ -73,6 +142,17 @@ html, body {
     }
     .navbar-brand img {
         width: 90%;
+    }
+    
+    .carousel-item img {
+        width: 92.5%;
+        margin-left: 16px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 120%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
     }
 }
 
@@ -104,5 +184,9 @@ html, body {
         width: 200px;
         font-size: 15px;
         margin-left: 10px;
+    }
+    .carousel-item img {
+        width: 91.3%;
+        margin-left: 16px;
     }
 }
