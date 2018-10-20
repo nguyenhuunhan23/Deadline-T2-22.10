@@ -60,6 +60,19 @@ html, body {
     opacity: .9;
 }
 
+/* Suppliers */
+.brand-intro-title {
+    font-size: 100px;
+    color: tomato;
+}
+#brand_intro .row {
+    margin-left: 10px;
+}
+.col-lg-4 h3 {
+    font-size: 50px;
+    margin-left: -5px;
+}
+
 
 /* Responsive */
 
@@ -83,6 +96,12 @@ html, body {
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
     }
+    .brand-intro-title {
+        font-size: 80px;
+    }
+    .col-lg-4 h3 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -101,6 +120,16 @@ html, body {
         margin-left: 1.8%;
         font-size: 40px;
     }
+    .brand-intro-title {
+        font-size: 75px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 35px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -114,6 +143,16 @@ html, body {
     .row h3 {
         margin-left: 1.8%;
         font-size: 40px;
+    }
+    .brand-intro-title {
+        font-size: 70px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 22px;
     }
 }
 
@@ -132,6 +171,16 @@ html, body {
     .row h3 {
         margin-left: 2%;
         font-size: 35px;
+    }
+    .brand-intro-title {
+        font-size: 70px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
     }
 }
 
@@ -158,11 +207,20 @@ html, body {
         top: 50%;
         transform: translateY(-10%)
     }
-    
     .carousel-caption h1 {
         font-size: 300%;
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
+    }
+    .brand-intro-title {
+        font-size: 60px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 23px;
     }
 }
 
@@ -195,6 +253,22 @@ html, body {
         margin-left: 2.5%;
         font-size: 35px;
     }
+    .brand-intro-title {
+        font-size: 55px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 22px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -217,6 +291,22 @@ html, body {
     .row h3 {
         margin-left: 3%;
         font-size: 30px;
+    }
+    .brand-intro-title {
+        font-size: 50px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
     }
 }
 
@@ -252,6 +342,22 @@ html, body {
     .card {
         width: 375px;
     }
+    .brand-intro-title {
+        font-size: 40px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
 }
 
 @media (max-width: 380px) {
@@ -278,6 +384,23 @@ html, body {
     }
     .card {
         width: 325px;
+    }
+    .brand-intro-title {
+        font-size: 35px;
+        margin-left: 10px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
     }
 }
 
@@ -313,5 +436,21 @@ html, body {
     }
     .card {
         width: 265px;
+    }
+    .brand-intro-title {
+        font-size: 30px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 20px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 15px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
     }
 }
