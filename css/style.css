@@ -352,6 +352,18 @@ html, body {
     .col-lg-4 img {
         width: 98.5%;
     }
+    .logo-footer {
+        width: 150%;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-copyright {
+        text-align: center;
+    }
+    .footer-social {
+        text-align: center;
+    }
 }
 
 @media (max-width: 425px) {
@@ -496,5 +508,8 @@ html, body {
     }
     .col-lg-4 img {
         width: 98.5%;
+    }
+    .logo-footer {
+        width: 100%;
     }
 }
