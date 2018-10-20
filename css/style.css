@@ -5,26 +5,60 @@ html, body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
 }
+/*Navigation */
+.navbar-nav li {
+    font-size: 25px;
+    padding-right: 40px;
+}
+#search-box {
+    width: 350px;
+    font-size: 20px;
+}
+/*Image Slider */
+.carousel-item img {
+    width: 98.3%;
+    margin-left: 16px;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%)
+}
 
-    .navbar-nav li {
-        font-size: 25px;
-        padding-right: 40px;
-    }
-    .carousel-item img {
-        width: 98.3%;
-        margin-left: 16px;
-    }
-    .carousel-caption {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-10%)
-    }
-    
-    .carousel-caption h1 {
-        font-size: 500%;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 15px #000;
-    }
+.carousel-caption h1 {
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+}
+/*Product Slider */
+.card img {
+    width: 10%;
+}
+.card img:hover {
+    opacity: .8;
+    transition: .5s;
+}
+.row {
+    width: 98.3%;
+}
+.row h2 {
+    font-size: 100px;
+}
+.row h3 {
+    margin-left: 1.5%;
+    font-size: 50px;
+}
+.owl-carousel {
+    margin-left: 26px;
+}
+.card-body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.card:hover::after {
+    opacity: .9;
+}
 
 
 /* Responsive */
@@ -57,10 +91,30 @@ html, body {
         padding-right: 36px;
     }
     /*Don't need to edit Image Slider */
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 80px;
+    }
+    .row h3 {
+        margin-left: 1.8%;
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 1366px) {
     /*Don't need to edit Image Slider */
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 80px;
+    }
+    .row h3 {
+        margin-left: 1.8%;
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -68,6 +122,16 @@ html, body {
         font-size: 400%;
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 97.5%;
+    }
+    .row h2 {
+        font-size: 70px;
+    }
+    .row h3 {
+        margin-left: 2%;
+        font-size: 35px;
     }
 }
 
@@ -121,6 +185,16 @@ html, body {
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
     }
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 70px;
+    }
+    .row h3 {
+        margin-left: 2.5%;
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -133,6 +207,16 @@ html, body {
         font-size: 200%;
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 60px;
+    }
+    .row h3 {
+        margin-left: 3%;
+        font-size: 30px;
     }
 }
 
@@ -154,6 +238,20 @@ html, body {
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
     }
+
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 7%;
+        font-size: 25px;
+    }
+    .card {
+        width: 375px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -166,6 +264,20 @@ html, body {
     #search-box {
         width: 250px;
         font-size: 15px;
+    }
+
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 7%;
+        font-size: 20px;
+    }
+    .card {
+        width: 325px;
     }
 }
 
@@ -188,5 +300,18 @@ html, body {
     .carousel-item img {
         width: 91.3%;
         margin-left: 16px;
+    }
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 10%;
+        font-size: 18px;
+    }
+    .card {
+        width: 265px;
     }
 }
