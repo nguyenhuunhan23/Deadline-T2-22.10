@@ -514,4 +514,7 @@ html, body {
     .logo-footer {
         width: 100%;
     }
+    #map iframe {
+        width: 220px;
+    }
 }
