@@ -1,106 +1,19 @@
 @import url('http://fonts.googleapis.com/css?family=Poppins:400,500,700');
-
 /*This part is fit with width = 1920x1080*/
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
-
-/******************Navigation-header-top*******************/
-#header-top {
-  background: #D83535;
-  width: 100%;
-}
-
-/* Search-bar */
-.search-box {
-  position: absolute;
-  margin: 2px 0px 20px 400px;
-  height: 40px;
-  padding: 15px;
-  background-color: white;
-  width: 35%;
-  border-radius: 10px;
-}
-
-.search-btn {
-  float: right;
-  color: black;
-  padding-left: 0px;
-  padding-top: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  display: block;
-  margin-top: -5px;
-  width: 5%;
-}
-
-.search-txt {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  margin-top: -8px;
-  color: black;
-  font-size: 30x;
-  transition: 0.4s;
-  /*line-height: 40px;*/
-  width: 400px;
-}
-
-/* Nav-menu */
-.navbar {
-  padding: .8Rem;
-  /*(1em = 16px;)*/
-}
-
-.navbar-nav li {
-  padding-right: 20px;
-}
-
-.nav-link:hover {
-  background-color: #D83535;
-}
-
-.nav-item ul {
-  position: absolute;
-  min-width: 150px;
-  background-color: #D83535;
-  display: none;
-  line-height: 30px;
-  width: 10%;
-}
-
-.nav-item ul li {
-  display: block;
-  background-color: #D83535;
-  padding-left: -100px;
-}
-
-.nav-item ul li a {
-  margin-left: -20px;
-}
-
-ul li:hover ul {
-  display: block;
-  border: 1px solid white;
-}
-
-#navbarResponsive {
-  width: 100%;
-}
-
-.nav-link {
-  font-size: 1.2em !important;
-}
+/*Navigation */
+.navbar-nav li { font-size: 25px; padding-right: 40px; }
+#search-box { width: 350px; font-size: 20px; }
+.fa-shopping-cart { color: lightgrey; }
+.fa-shopping-cart:hover { color: #444; }
 
 /*title-box-collection*/
 .title-box-collection {
-  margin: 25px 0px 15px 5px
+  margin: 25px 0px 15px -10px
 }
 /*breadcrumb*/
 #breadcrumb {
@@ -125,393 +38,549 @@ ul li:hover ul {
 .row .col-sm-3 .col-xs-12 {
   border: 1px solid black;
 }
-/******************Footer****************/
-#footer_1 {
-  background-color: #0F67B7;
-  color: #d5d5d5;
-  padding-top: 2rem;
+#card-img-top-huntman, #card-img-top-chromaV2 {
+    margin-top: 15px;
 }
 
-hr.light {
-  border-top: 1px solid #d5d5d5;
-  width: 75%;
-  margin-top: .8rem;
-  margin-bottom: 1rem;
+/***** Footer *****/
+#footer-row {
+    margin-left: 2%;
+}
+.footer-top { padding: 60px 0; background: #333; text-align: left; color: #aaa; }
+.footer-top h3 { padding-bottom: 10px; color: #fff; }
+
+.footer-about img.logo-footer { max-width: 300px; margin-top: 0; margin-bottom: 18px; }
+.footer-about p a { border: 0; }
+.footer-about p a:hover, .footer-about p a:focus { border: 0; }
+
+.footer-contact p { word-wrap: break-word; }
+.footer-contact i { padding-right: 10px; font-size: 18px; color: #666; }
+.footer-contact p a { border: 0; }
+.footer-contact p a:hover, .footer-contact p a:focus { border: 0; }
+
+.footer-links a { color: #aaa; border: 0; }
+.footer-links a:hover, .footer-links a:focus { color: #fff; }
+
+.footer-bottom { padding: 15px 0 17px 0; background: #444; text-align: left; color: #aaa; }
+
+.footer-social { padding-top: 3px; text-align: right; }
+.footer-social a { margin-left: 20px; color: #777; border: 0; }
+.footer-social a:hover, .footer-social a:focus { color: #79a05f; border: 0; }
+.footer-social i { font-size: 24px; vertical-align: middle; }
+
+.footer-copyright { padding-top: 5px; }
+.footer-copyright a { color: #fff; border: 0; }
+.footer-copyright a:hover, .footer-copyright a:focus { color: #aaa; border: 0; }
+
+
+
+/* Responsive */
+
+@media (max-width: 1600px) {
+    .navbar-nav li {
+        font-size: 22px;
+        padding-right: 38px;
+    }
+    .carousel-item img {
+        width: 97.5%;
+        margin-left: 16px;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%)
+    }
+    
+    .carousel-caption h1 {
+        font-size: 500%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .brand-intro-title {
+        font-size: 80px;
+    }
+    .col-lg-4 h3 {
+        font-size: 40px;
+    }
+    .browse-tag {
+        margin-right: -14px;
+    }
+    #card-body-huntsman, #card-body-tournamentX {
+        margin-top: -20px;
+    }
+    #card-body-chromaV2 {
+        margin-top: -5px;
+    }
 }
 
-.footer a {
-  color: #d5d5d5;
-}
-
-#footer_1 img {
-  margin-left: 56px;
-}
-
-hr.light-100 {
-  border-top: 1px solid #d5d5d5;
-  width: 100%;
-  margin-top: .8rem;
-  margin-bottom: 1rem;
-}
-
-.last-col {
-  width: 60%;
-  margin-left: 90px;
-}
-
-/*This part is end of with width = 1920x1080*/
-/*******************Responsive***************/
 @media (max-width: 1440px) {
-
-  /*Header*/
-  .navbar {
-    width: 100%;
-  }
-
-  #navbarResponsive {
-    font-size: 20px
-  }
-
-  /*Search-Box*/
-  .search-box {
-    position: absolute;
-    margin: 2px 0px 22px 300px;
-    height: 40px;
-    padding: 15px;
-    background-color: white;
-    width: 20%;
-    border-radius: 10px;
-  }
-
-  .search-btn {
-    float: right;
-    color: black;
-    padding-left: 0px;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    display: block;
-    margin-top: -25px;
-    width: 5%;
-  }
-
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    margin-top: -8px;
-    color: black;
-    font-size: 30x;
-    transition: 0.4s;
-    /*line-height: 40px;*/
-    width: 400px;
-  }
-
-  /*footer*/
-  footer {
-    width: 100%;
-  }
-
-  #footer_1 img {
-    margin-left: 40px;
-    width: 20%;
-  }
-
-  .copyRight {
-    font-size: 90%;
-  }
-
-  .last-col {
-    width: 70%;
-    margin-left: 48px;
-  }
+    .navbar-nav li {
+        font-size: 20px;
+        padding-right: 36px;
+    }
+    /*Don't need to edit Image Slider */
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 80px;
+    }
+    .row h3 {
+        margin-left: 1.8%;
+        font-size: 40px;
+    }
+    .brand-intro-title {
+        font-size: 75px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 35px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 20px;
+    }
+    .row-content {
+        width: 1400px;
+    }
+    .product-list {
+        margin-left: 30px;
+    }
+    .card-title-gear {
+        font-size: 13px;
+    }
+    #card-body-huntsman, #card-body-tournamentX {
+        margin-top: -20px;
+    }
+    #card-body-chromaV2 {
+        margin-top: -5px;
+    }
 }
 
 @media (max-width: 1366px) {
-
-  /*Header*/
-  #header-top {
-    margin-left: 4px;
-  }
-
-  .navbar {
-    width: 100%;
-  }
-
-  #navbarResponsive {
-    font-size: 16px
-  }
-
-  /*Search-box*/
-  .search-box {
-    position: absolute;
-    margin: 2px 0px 22px 290px;
-    height: 40px;
-    padding: 15px;
-    background-color: white;
-    width: 20%;
-    border-radius: 10px;
-  }
+    .navbar-nav li {
+        font-size: 20px;
+        padding: 10px;
+    }
+    /*Don't need to edit Image Slider */
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 80px;
+    }
+    .row h3 {
+        margin-left: 1.8%;
+        font-size: 40px;
+    }
+    .brand-intro-title {
+        font-size: 70px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 22px;
+    }
+    .row-content {
+        width: 1330px;
+    }
+    .product-list {
+        margin-left: 25px;
+    }
 }
 
-@media (max-width: 1340px) {
-  #card-title-gear {
-    font-size: 20px;
-  }
-
-  .search-box {
-    position: absolute;
-    margin: 2px 0px 22px 280px;
-    height: 40px;
-    padding: 15px;
-    background-color: white;
-    width: 15%;
-    border-radius: 10px;
-  }
-
-  .search-btn {
-    float: right;
-    color: black;
-    padding-left: 0px;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    display: block;
-    margin-top: -25px;
-    width: 5%;
-  }
-
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    margin-top: -8px;
-    color: black;
-    font-size: 30x;
-    transition: 0.4s;
-    /*line-height: 40px;*/
-    width: 400px;
-  }
+@media (max-width: 1280px) {
+    .navbar-nav li {
+        font-size: 20px;
+        padding: 2px;
+    }
+    .carousel-caption h1 {
+        font-size: 400%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 97.5%;
+    }
+    .row h2 {
+        font-size: 70px;
+    }
+    .row h3 {
+        margin-left: 2%;
+        font-size: 35px;
+    }
+    .brand-intro-title {
+        font-size: 70px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .row-content {
+        width: 1230px;
+    }
+    .product-list {
+        margin-left: 30px;
+    }
+    #card-body-tournamentX {
+        margin-top: 0px;
+    }
+    #card-body-750blue {
+        margin-top: 15px;
+    }
+    #card-body-900white, #card-body-980black {
+        margin-top: 15px;
+    }
+    #card-body-k68rgb, #card-body-980blue, #card-body-70lux, #card-body-660black, #card-body-k95, #card-body-k95Gun {
+        margin-top: 15px;
+    }
 }
 
 @media (max-width: 1024px) {
-  /*Header*/
-  .navbar {
-    width: 100%;
-  }
+    .navbar-nav li {
+        font-size: 18px;
+    }
 
-  #navbarResponsive {
-    font-size: 14px;
-  }
+    input {
+        width: 10px;
+    }
 
-  .navbar-nav {
-    margin-right: 20px;
-  }
+    #search-box {
+        width: 120px;
+        font-size: 12px;
+    }
 
-  /*Search-box*/
-  .search-box {
-    height: 40px;
-    padding: 15px;
-    width: 95.5%;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    margin: 70px 0px 0px -10px;
-  }
+    .carousel-item img {
+        width: 96.3%;
+        margin-left: 16px;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-10%)
+    }
+    .carousel-caption h1 {
+        font-size: 300%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .brand-intro-title {
+        font-size: 60px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 23px;
+    }
+    .row-content {
+        width: 101.5%;
+    }
+    #card-body-600black, #card-body-k63, #card-body-quartz, #card-body-chromaV2 {
+        margin-top: 5px;
+    }
+    #card-body-ultimate, #card-body-k63wl, #card-body-k65,  #card-body-strafe{
+        margin-top: 15px;
+    }
+}
 
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    margin-top: -8px;
-    color: black;
-    font-size: 30x;
-    transition: 0.4s;
-    /*line-height: 40px;*/
-    width: 400px;
-  }
+@media (max-width: 984px) {
+    .navbar-nav li {
+        margin-left: 30px;
+    }
+    
+    .dropdown-menu {
+        width: 30%;
+    }
+    #search-box {
+        width: 300px;
+        font-size: 15px;
+        margin-left: 30px;
+    }
 
-  .search-btn {
-    float: right;
-    color: lightgray;
-    padding-left: 0px;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    display: block;
-    margin-top: -5px;
-    margin-left: : 800px;
-    display: block;
-  }
-
-  /*footer*/
-  #footer_1 img {
-    margin-left: 26px;
-    width: 15%;
-  }
-
-  .last-col {
-    width: 70%;
-    margin-left: 33px;
-  }
-
-  #text-form {
-    font-size: 13px;
-  }
+    .carousel-caption h1 {
+        font-size: 250%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 70px;
+    }
+    .row h3 {
+        margin-left: 2.5%;
+        font-size: 35px;
+    }
+    .brand-intro-title {
+        font-size: 55px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 30px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 22px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
+    .row-content {
+        width: 940px;
+    }
+    .product-list {
+        margin-left: 30px;
+    }
+    .row-content {
+        width: 101.5%;
+    }
 }
 
 @media (max-width: 768px) {
-  html {
-    width: 100%;
-  }
+    .carousel-item img {
+        width: 96%;
+        margin-left: 16px;
+    }
 
-  .search-btn {
-    float: right;
-    color: lightgray;
-    padding-left: 0px;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    display: block;
-    margin-top: -32px;
-    margin-left: 5px;
-  }
+    .carousel-caption h1 {
+        font-size: 200%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 98.3%;
+    }
+    .row h2 {
+        font-size: 60px;
+    }
+    .row h3 {
+        margin-left: 3%;
+        font-size: 30px;
+    }
+    .brand-intro-title {
+        font-size: 50px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
+    .logo-footer {
+        width: 150%;
+    }
+    .row-content {
+        width: 730px;
+    }
+    .product-list {
+        margin-left: 20px;
+    }
+    #card-body-600black, #card-body-k63, #card-body-quartz {
+        margin-top: 20px;
+    }
+    #card-body-750blue, #card-body-ultimate, #card-body-900white, #card-body-k65, #card-body-980black {
+        margin-top: 30px;
+    }
+    #card-body-tournamentX {
+        margin-top: 15px;
+    }
+    #card-body-660black {
+        margin-top: 32px;
+    }
+}
 
-  .search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    margin-top: -17px;
-    color: black;
-    font-size: 30x;
-    transition: 0.4s;
-    /*line-height: 40px;*/
-  }
-
-  input[type=text] {
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  input[type=submit] {
-    border-radius: 5px;
-    width: 100%;
-    position: static;
-    margin-top: 5px;
-    padding: 10px;
-  }
-
-  #navbarResponsive {
-    font-size: 7.9px;
-    margin: 0px 1px;
-  }
-
-  .social a {
-    font-size: 2em;
-    padding: 1.2rem;
-  }
-
-  footer {
-    width: 100%;
-  }
-
-  #footer_1 img {
-    margin-left: 20px;
-  }
-
-  #footer_1 .text-center .col-md-3 {
-    font-size: 90%;
-  }
-
-  #footer_text {
-    font-size: 130%;
-    margin-left: -20px;
-    text-align: center;
-  }
-
-  .last-col .input-group {
-    margin-left: -20px;
-    width: 130px;
-  }
-
-  .last-col {
-    width: 70%;
-    margin-left: 28px;
-    text-align: center;
-  }
+@media (max-width: 767px) {
+    .footer-copyright {
+        text-align: center;
+    }
+    .footer-social {
+        text-align: center;
+    }
 }
 
 @media (max-width: 425px) {
-  /*Header*/
-  .navbar {
-    width: 100%;
-  }
-  #header-top {
+    .navbar-brand{
+        width: 80%;
+    }
+    .navbar-brand img {
+        width: 90%;
+    }
+    
+    .carousel-item img {
+        width: 92.5%;
+        margin-left: 16px;
+    }
 
-  }
-  .navbar-brand img{
-    width: 100%;
-    margin-left: 5px;
-  }
-  .nav-item {
-    font-size: 15px;
-  }
-
-  #navbarResponsive{
-    margin-left: 30px;
-    height: 100%;
-    font-size: 15px;
-  }
-  .search-box::after{
-    width: 90%;
-    margin-left: 2px;
-    margin-top: 1000px;
-  }
-
-  #footer_1 img {
-    width: 75%;
-    margin-left: 47px;
-  }
-
-  #footer_1 #text .last-col .footer_text {
-    font-size: 140%;
-    margin-left: 40px
-  }
-
-  #footer_1 #text .last-col .input-group {
-    margin-left: 29px;
-    width: 100%;
-  }
-
-  #footer_1 #text .last-col .input-group .form-control {
-    font-size: 18px;
-    padding: 0px 10px;
-  }
+    .carousel-caption h1 {
+        font-size: 120%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+    }
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 7%;
+        font-size: 25px;
+    }
+    .card {
+        width: 375px;
+    }
+    .brand-intro-title {
+        font-size: 40px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
+    #map iframe {
+        width: 300px;
+    }
+    .row-content {
+        width: 390px;
+    }
+    .product-list {
+        margin-left: 15px;
+    }
 }
 
-@media (max-width: 375px) {
-  .search-box {
-    width: 88.9%;
-    margin-left: 5px;
-  }
+@media (max-width: 380px) {
+    .navbar-brand{
+        width: 70%;
+    }
+    .navbar-brand img {
+        width: 90%;
+    }
+    #search-box {
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 7%;
+        font-size: 20px;
+    }
+    .card {
+        width: 325px;
+    }
+    .brand-intro-title {
+        font-size: 35px;
+        margin-left: 10px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 25px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 18px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
+    .row-content {
+        width: 340px;
+    }
+    .product-list {
+        margin-left: 15px;
+    }
 }
 
 @media (max-width: 320px) {
-  .search-box {
-    width: 87.9%;
-    margin-left: 5px;
-    margin-top: 90px;
-  }
+    .navbar-nav li {
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .navbar-brand{
+        width: 70%;
+    }
+    .navbar-brand img {
+        width: 80%;
+    }
+    #search-box {
+        width: 200px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .carousel-item img {
+        width: 91.3%;
+        margin-left: 16px;
+    }
+    .row {
+        width: 100%;
+    }
+    .row h2 {
+        font-size: 30px;
+    }
+    .row h3 {
+        margin-left: 10%;
+        font-size: 18px;
+    }
+    .card {
+        width: 265px;
+    }
+    .brand-intro-title {
+        font-size: 30px;
+    }
+    .col-lg-4 h3 {
+        margin-left: -5px;
+        font-size: 20px;
+    }
+    .brandParagraph_3 a {
+        margin-top: 0px;
+    }
+    .col-lg-4 p {
+        font-size: 15px;
+    }
+    .col-lg-4 img {
+        width: 98.5%;
+    }
+    .logo-footer {
+        width: 100%;
+    }
+    #map iframe {
+        width: 220px;
+    }
+    .row-content {
+        width: 280px;
+    }
+    .product-list {
+        margin-left: 15px;
+    }
 }
