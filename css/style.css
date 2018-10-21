@@ -152,6 +152,16 @@ html, body {
     }
 }
 
+@media (max-width: 1317px) {
+    .navbar-nav li {
+        font-size: 22px;
+        padding: 2px;
+    }
+    .card-body h5{
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 1280px) {
     .navbar-nav li {
         font-size: 20px;
