@@ -23,29 +23,20 @@ html, body {
     text-align: center;
   }
 
-/*Image Slider */
-.carousel-item img { width: 98.3%; margin-left: 16px; }
-.carousel-caption { position: absolute; top: 50%; transform: translateY(-10%) }
-.carousel-caption h1 { font-size: 500%; text-transform: uppercase; text-shadow: 1px 1px 15px #000; }
-
-/*Product Slider */
-.card img { width: 10%; }
-.card img:hover { opacity: .8; transition: .5s; }
-.row { width: 98.3%; }
-.row h2 { font-size: 100px; }
-.row h3 { margin-left: 1.5%; font-size: 50px; }
-.row h3 a { color: lightslategray; text-decoration: none;}
-.row h3 a:hover{ color: lightgrey;}
-.owl-carousel { margin-left: 26px; }
-.card-body { margin: 0; padding: 0; text-align: center; }
-.card:hover::after { opacity: .9; }
-.card-body .btn { background-color: white; color: lightslategrey}
-
-/* Suppliers */
-.brand-intro-title { font-size: 100px; color: tomato; }
-#brand_intro .row { margin-left: 10px; }
-.col-lg-4 h3 { font-size: 50px; margin-left: -5px; }
-
+/*Fotorama Image Slider */
+#content {
+    height: 400px;
+    width: 70%;
+}
+#left {
+    float: left;
+    width: 60%;
+    margin-left: 
+}
+#right {
+    overflow: hidden;
+    width: 40%;
+}
 /***** Footer *****/
 #footer-row {
     margin-left: 2%;

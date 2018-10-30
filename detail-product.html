@@ -6,21 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Gear Nation | Homepage</title>
     <link rel="icon" href="images/core-img/1x/1x/logo_title.png">
-    <link href="css/style_keyboard.css" rel="stylesheet">
+    <link href="css/style-product-detail.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/fotorama.css">
     
-    <!-- Custrom boostrap, ... -->
+    <!-- Custrom boostrap script  ... -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="js/all.js"></script>
+    <script src="js/fotorama.js"></script>
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script>
     <script>
+        var itemCount = 0;
+        $('.add').click(function (){
+            itemCount ++;
+            $('#itemCount').html(itemCount).css('display', 'block');
+        }); 
+
+        $('.clear').click(function() {
+            itemCount = 0;
+            $('#itemCount').html('').css('display', 'none');
+            $('#cartItems').html('');
+        }); 
     </script>
 </head>
 <body>
@@ -78,6 +91,7 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <span id="itemCount"></span>
                 </li>
                 
             </ul>
@@ -88,97 +102,40 @@
         </div>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div id="collection" class="container-fluid">
-        <div class="col-sm-12">
-            <h3 class="title-box-collection"> Corsair Keyboard</h3>
-            <div class="row">
-                <div class="main-content">
-                    <div id="breadcrumb">
-                        <span class="showHere">You're at: </span>
-                        <a href="index.html" class="pathway">Homepage</a>
-                        <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard.html" class="pathway">Keyboard</a>
-                        <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard_leopold.html" class="pathway">Leopold Keyboard</a>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="browse-tag spull-right">
-                            <span>Sort</span>
-                            <select class="sort-by custom-dropdown_select custom-dropdown_select--white">
-                                <option value="manual">Featured products</option>
-                                <option value="manual">Low to High</option>
-                                <option value="manual">High to Low</option>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                    <!-- Product List -->
-                    <div class="col-md-12 product-list">
-                        <div class="row content-product-list">
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc660m-PD/fc660m.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC600M-PD Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc750r-PD/fc750r-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC750R-PD Blue Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc900r-PD/fc900r-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC900R-PD White Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc980M/fc980m.png">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC600M-PD Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc980m-PD/fc980m-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC980M-PD Blue Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc660c/fc660c.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC660c Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+    <div class="container" id="content">
+        <div id="left">
+            <div class="fotorama"data-nav="thumbs" data-autoplay="3000">
+                    <a href="test.png"><img src="test.png" id="test"></a>
+                    <a href="images/product-slider/keyboard/corsair_k70mk2se.png"><img src="images/product-slider/keyboard/corsair_k70mk2se.png"></a>
+                </div>
+        </div>
+        <div id="right">
+                <h1 id="product-title">Corsair K70 MK2.SE</h1>
+                <h6 id="nsx">Corsair</h6>
+                <h6 id="Waranty"> Waranty: 24 months</h6>
+                <h6>Price: <span>$</span>70</h6>
+                <button class="btn btn-secondary btn-sm">Add to cart</button>
+        </div>
+    </div>
+    <!--
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 product_thumbnail">
+                <div class="fotorama"data-nav="thumbs" data-autoplay="3000">
+                    <a href="test.png"><img src="test.png" id="test"></a>
+                    <a href="images/product-slider/keyboard/corsair_k70mk2se.png"><img src="images/product-slider/keyboard/corsair_k70mk2se.png"></a>
                 </div>
             </div>
         </div>
+        <div class="col-sm-6 col-xs-12 product_thumbnail">
+            <div class="container-right" >
+                <h1 id="product-title">Title here</h1>
+            </div>
+        </div>
     </div>
-   
+-->
+
+
     <br><br><br>
     <!-- Footer -->
     <footer>
@@ -213,8 +170,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p><a class="scroll-link" href="#top-content">Home</a></p>
-                                <p><a href="#">Keyboard</a></p>
+                                <p><a class="scroll-link" href="index.html">Home</a></p>
+                                <p><a href="keyboard.html">Keyboard</a></p>
                                 <p><a href="#">Mouse</a></p>
                                 <p><a href="#">Headphone</a></p>
                             </div>
@@ -248,7 +205,7 @@
             margin:10,
             nav:true,
             responsive:{
-                0:{
+                0:{ 
                     items:1
                 },
                 600:{
