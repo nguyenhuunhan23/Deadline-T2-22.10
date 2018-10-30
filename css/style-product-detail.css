@@ -30,12 +30,14 @@ html, body {
 }
 #left {
     float: left;
-    width: 60%;
-    margin-left: 
+    width: 30%;
 }
 #right {
     overflow: hidden;
     width: 40%;
+}
+.fotorama {
+
 }
 /***** Footer *****/
 #footer-row {
