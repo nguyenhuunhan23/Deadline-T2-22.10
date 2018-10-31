@@ -6,23 +6,10 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 /*Navigation */
-.navbar-nav li { font-size: 25px; padding-right: 40px; }
+.navbar-nav li { font-size: 25px; padding-right: 40px;  }
 #search-box { width: 350px; font-size: 20px; }
 .fa-shopping-cart { color: lightgrey; }
 .fa-shopping-cart:hover { color: #444; }
-#itemCount {
-    position: absolute;
-    display: none;
-    top: -10px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
-    color: white;
-    text-align: center;
-  }
-
 /*Image Slider */
 .carousel-item img { width: 98.3%; margin-left: 16px; }
 .carousel-caption { position: absolute; top: 50%; transform: translateY(-10%) }
@@ -40,6 +27,9 @@ html, body {
 .card-body { margin: 0; padding: 0; text-align: center; }
 .card:hover::after { opacity: .9; }
 .card-body .btn { background-color: white; color: lightslategrey}
+.card-body span {text-align: left;}
+.card-body .product-title{text-align: left; font-size: 20px; font-weight: bold;}
+.card-body .price {font-size: 20px;}
 
 /* Suppliers */
 .brand-intro-title { font-size: 100px; color: tomato; }
@@ -100,13 +90,25 @@ html, body {
         text-transform: uppercase;
         text-shadow: 1px 1px 15px #000;
     }
+    .card-body h5 {
+        font-size: 19px;
+    }
     .brand-intro-title {
         font-size: 80px;
+    }
+    .card-body .product-title {
+        font-size: 17px;
     }
     .col-lg-4 h3 {
         font-size: 40px;
     }
 }
+@media (max-width:  1500px) {
+    .card-body .product-title, .price {
+        font-size: 16px;
+    }
+}
+
 
 @media (max-width: 1440px) {
     .navbar-nav li {
@@ -114,6 +116,9 @@ html, body {
         padding-right: 36px;
     }
     /*Don't need to edit Image Slider */
+    .card-body h5 {
+        font-size: 17px;
+    }
     .row {
         width: 98.3%;
     }
@@ -133,6 +138,12 @@ html, body {
     }
     .brandParagraph_3 a {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .card-body .product-title, .price {
+        font-size: 15px;
     }
 }
 
@@ -166,10 +177,13 @@ html, body {
         font-size: 19px;
         padding: 2px;
     }
-    .card-body h5{
+      
+}
+
+@media (max-width: 1330px) {
+    .card-body .product-title, .price {
         font-size: 14px;
     }
-      
 }
 
 @media (max-width: 1326px) {
@@ -214,6 +228,12 @@ html, body {
     }
 }
 
+@media (max-width: 1240px) {
+    .card-body .product-title, .price {
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 1024px) {
     .navbar-nav li {
         font-size: 18px;
@@ -251,6 +271,9 @@ html, body {
     }
     .brandParagraph_3 a {
         margin-top: 23px;
+    }
+    .card-body .product-title, .price {
+        font-size: 9px;
     }
 }
 
@@ -299,6 +322,9 @@ html, body {
     .col-lg-4 img {
         width: 98.5%;
     }
+    .card-body .product-title, .price {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -340,6 +366,9 @@ html, body {
     }
     .logo-footer {
         width: 150%;
+    }
+    .card-body .product-title, .price{
+        font-size: 13px;
     }
 }
 

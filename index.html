@@ -20,22 +20,9 @@
     <script src="js/all.js"></script>
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        var itemCount = 0;
-        $('.add').click(function (){
-            itemCount ++;
-            $('#itemCount').html(itemCount).css('display', 'block');
-        }); 
-
-        $('.clear').click(function() {
-            itemCount = 0;
-            $('#itemCount').html('').css('display', 'none');
-            $('#cartItems').html('');
-        }); 
-    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
         <a class="navbar-brand" href="index.html"><img src="images/core-img/1x/logo_1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -138,7 +125,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-3">
+    <div class="container-fluid mt-4 ">
         <div class="row">
             <div class="owl-carousel owl-theme">
                 <!-- Corsair K95 Gunmetal-->
@@ -146,8 +133,8 @@
                     <div class="card">
                         <img src="images/product-slider/keyboard/corsair_k95_gunmetal1.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Corsair K95 Gunmetal</h5>
-                            <h5>$<span class="text-center">199.99</span></h5>
+                            <span class="product-title">Corsair K95 Gunmetal</span><br>
+                            <span class="price">$<span class="text-center">199.99</span></span><br>
                             <button class="btn btn-secondary btn-sm add">Add to cart</button>
                         </div>
                     </div>
@@ -157,8 +144,8 @@
                     <div class="card">
                         <img src="images/product-slider/keyboard/corsair_k70mk2se.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Corsair k70 MK2.SE</h5>
-                            <h5>$<span class="text-center">159.99</span></h5>
+                            <span class="product-title">Corsair k70 MK2.SE</span><br>
+                            <span class="price">$<span class="text-center">159.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -168,8 +155,8 @@
                     <div class="card">
                         <img src="images/product-slider/keyboard/razer_blackwidowelite.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Razer Blackwidow Elite</h5>
-                            <h5>$<span class="text-center">169.99</span></h5>
+                            <span class="product-title">Razer Blackwidow Elite</span><br>
+                            <span class="price">$<span class="text-center">169.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -179,8 +166,8 @@
                     <div class="card">
                         <img src="images/product-slider/keyboard/leopold_fc980mpd_bluefont_weba.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Leopold FC980M PD</h5>
-                            <h5>$<span class="text-center">219.99</span></h5>
+                            <span class="product-title">Leopold FC980M PD</span><br>
+                            <span class="price">$<span class="text-center">219.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -190,8 +177,8 @@
                     <div class="card">
                         <img src="images/product-slider/keyboard/razer_bwu_ip54_2.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Razer Blackwidow Ultimate</h5>
-                            <h5>$<span class="text-center">123.99</span></h5>
+                            <span class="product-title">Razer Blackwidow Ultimate</span><br>
+                            <span class="price">$<span class="text-center">123.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -214,8 +201,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/g502hero.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Logitech G502 Hero</h5>
-                            <h5>$<span class="text-center">79.99</span></h5>
+                            <span class="product-title">Logitech G502 Hero</span><br>
+                            <span class="price">$<span class="text-center">79.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -225,8 +212,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/rival310pubg.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>SteelSeries Rival 310 PUBG</h5>
-                            <h5>$<span class="text-center">69.99</span></h5>
+                            <span class="product-title">SteelSeries Rival 310 PUBG</span><br>
+                            <span class="price">$<span class="text-center">69.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -237,8 +224,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/razer_basiliskess.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Razer Basilisk</h5>
-                            <h5>$<span class="text-center">69.99</span></h5>
+                            <span class="product-title">Razer Basilisk</span><br>
+                            <span class="price">$<span class="text-center">69.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -249,8 +236,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/rival650.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>SteelSeries Rival 650 Wireless</h5>
-                            <h5>$<span class="text-center">119.99</span></h5>
+                            <span class="product-title">SteelSeries Rival 650 Wireless</span><br>
+                            <span class="price">$<span class="text-center">119.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -260,8 +247,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/g903.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Logitech G903 Wireless</h5>
-                            <h5>$<span class="text-center">149.99</span></h5>
+                            <span class="product-title">Logitech G903 Wireless</span><br>
+                            <span class="price">$<span class="text-center">149.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -271,8 +258,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/atheris.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Razer Atheris Wireless</h5>
-                            <h5>$<span class="text-center">49.99</span></h5>
+                            <span class="product-title">Razer Atheris Wireless</span><br>
+                            <span class="price">$<span class="text-center">49.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -283,8 +270,8 @@
                     <div class="card">
                         <img src="images/product-slider/mouse/razer-dva-abyssus.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Razer D.VA Abysssus Elite </h5>
-                            <h5>$<span class="text-center">58.78</span></h5>
+                            <span class="product-title">Razer D.VA Abysssus Elite </span><br>
+                            <span class="price">$<span class="text-center">58.78</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -308,8 +295,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/arctis-3-red.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>SteelSeries Arctis 3 Red Solar</h5>
-                            <h5>$<span class="text-center">67.99</span></h5>
+                            <span class="product-title">SteelSeries Arctis 3 Red Solar</span><br>
+                            <span class="price">$<span class="text-center">67.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -319,8 +306,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/g433.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Logitech G433</h5>
-                            <h5>$<span class="text-center">99.99</span></h5>
+                            <span class="product-title">Logitech G433</span><br>
+                            <span class="price">$<span class="text-center">99.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -330,8 +317,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/arctis-7-wireless.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>SteelSeries Arctis 7 Black</h5>
-                            <h5>$<span class="text-center">149.99</span></h5>
+                            <span class="product-title">SteelSeries Arctis 7 Black</span><br>
+                            <span class="price">$<span class="text-center">149.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -341,8 +328,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/rog-strix-fusion-300.jpg" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>ROG Strix Fusion 300 </h5>
-                            <h5>$<span class="text-center">99.99</span></h5>
+                            <span class="product-title">ROG Strix Fusion 300 </span><br>
+                            <span class="price">$<span class="text-center">99.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -352,8 +339,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/g933.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>Logitech G933</h5>
-                            <h5>$<span class="text-center">199.99</span></h5>
+                            <span class="product-title">Logitech G933</span><br>
+                            <span class="price">$<span class="text-center">199.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
@@ -363,8 +350,8 @@
                     <div class="card">
                         <img src="images/product-slider/headphone/rog-fusion-wireless.png" alt="img" class="card-img-top">
                         <div class="card-body">
-                            <h5>ROG Strix Fusion 700 Wireless</h5>
-                            <h5>$<span class="text-center">219.99</span></h5>
+                            <span class="product-title">ROG Strix Fusion 700 Wireless</span><br>
+                            <span class="price">$<span class="text-center">219.99</span></span><br>
                             <button class="btn btn-secondary btn-sm">Add to cart</button>
                         </div>
                     </div>
