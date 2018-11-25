@@ -24,7 +24,7 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
         <a class="navbar-brand" href="index.html"><img src="images/core-img/1x/logo_1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,10 +53,9 @@
                     Mouse
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mouse_razer.html">Razer</a>
-                        <a class="dropdown-item" href="mouse_corsair.html">Corsair</a>
+                        <a class="dropdown-item" href="mouse_asus.html">Asus</a>
                         <a class="dropdown-item" href="mouse_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="mouse_steelseries.html">SteelSeries</a>
+                        <a class="dropdown-item" href="mouse_zowie.html">Zowie</a>
                         <!--<div class="dropdown-divider">Logitech</div>
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
@@ -67,18 +66,19 @@
                     Headphone
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="headphone_razer.html">Razer</a>
+                        <a class="dropdown-item" href="headphone_asus.html">Asus</a>
                         <a class="dropdown-item" href="headphone_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="headphone_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="headphone_logitech.html">Asus</a>
-                        <a class="dropdown-item" href="headphone_steelseries.html">SteelSeries</a>
+                        <a class="dropdown-item" href="headphone_hyperxhtml">HyperX</a>
                         <!-- <div class="dropdown-divider">Logitech</div>
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    <span id="itemCount"></span>
+                    <a class="nav-link" href="cart.html" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="itemCount" data-count="0">0</span>
+                    </a>
+                    
                 </li>
                 
             </ul>
