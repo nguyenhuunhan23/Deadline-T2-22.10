@@ -1,3 +1,7 @@
+<?php
+    require_once("config/config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,14 +31,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
-        <a class="navbar-brand" href="index.html"><img src="images/core-img/1x/logo_1.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="images/core-img/1x/logo_1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <!-- Drop down keyboard-->
                 <li class="nav-item dropdown">
@@ -42,41 +46,15 @@
                     Keyboard
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="keyboard_razer.html">Razer</a>
-                        <a class="dropdown-item" href="keyboard_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="keyboard_leopold.html">Leopold</a>
+                        <a class="dropdown-item" href="keyboard_razer.php">Razer</a>
+                        <a class="dropdown-item" href="keyboard_corsair.php">Corsair</a>
+                        <a class="dropdown-item" href="keyboard_leopold.php">Leopold</a>
                         <!-- <div class="dropdown-divider">Leopold</div>
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
-                <!-- Drop down mouse-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mouse
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mouse_asus.html">Asus</a>
-                        <a class="dropdown-item" href="mouse_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="mouse_zowie.html">Zowie</a>
-                        <!--<div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
-                <!-- Drop down headphone-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Headphone
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="headphone_asus.html">Asus</a>
-                        <a class="dropdown-item" href="headphone_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="headphone_hyperxhtml">HyperX</a>
-                        <!-- <div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html" id="cart-icon">
+                    <a class="nav-link" href="cart.php" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="itemCount" data-count="0">0</span>
                     </a>
@@ -120,250 +98,46 @@
     </div>
 
     <!--Product Slider 1-->
+    <?php
+        $sql = "SELECT * FROM product WHERE MaLoai=1";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+    ?>
     <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-md-12 text-center text-success">
                 <h2>New Features</h2>
             </div>
-            <h3><a href="keyboard.html">Keyboard</a></h3>
+            <h3><a href="keyboard.php">Keyboard</a></h3>
         </div>
     </div>
-
     <div class="container-fluid mt-4 ">
         <div class="row">
             <div class="owl-carousel owl-theme">
-                <!-- Corsair K95 Gunmetal-->
+                <?php
+                    while ($row = $result->fetch_assoc()){
+                        $imagelinks = explode(" , ",$row["CacHinhAnh"]);
+                ?>
                 <div class="item">
                     <div class="card">
-                        <img src="images/product-slider/keyboard/corsair_k95_gunmetal1.png" alt="img" class="card-img-top">
+                        <a href="product-detail.php?MaSP=<?php echo $row["MaSP"]; ?>"><img src="<?php echo $imagelinks[0]; ?>" alt="img" class="card-img-top"></a>
                         <div class="card-body">
-                            <span class="product-title">Corsair K95 Gunmetal</span><br>
-                            <span class="price">$<span class="text-center">199.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
+                            <span class="product-title"><?php echo $row["TenSP"]; ?></span><br>
+                            <span class="text-center"><?php echo $row["GiaDonVi"]; ?></span></span><br>
+                            <button class="btn btn-secondary btn-sm btn-add" onclick="window.location.href='index.php?page=product&action=add&MaSP=<?php echo $row['MaSP']; ?>'">Add to cart</button>
                         </div>
                     </div>
                 </div>
-                <!--Corsair k70 Mk2 SE-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/keyboard/corsair_k70mk2se.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Corsair k70 MK2.SE</span><br>
-                            <span class="price">$<span class="text-center">159.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Razer Black Widow Elite-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/keyboard/razer_blackwidowelite.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Razer Blackwidow Elite</span><br>
-                            <span class="price">$<span class="text-center">169.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Leopold -->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/keyboard/leopold_fc980mpd_bluefont_weba.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Leopold FC980M PD</span><br>
-                            <span class="price">$<span class="text-center">219.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Razer Black Widow Ultimate-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/keyboard/razer_bwu_ip54_2.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Razer Blackwidow Ultimate</span><br>
-                            <span class="price">$<span class="text-center">123.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Product Slider 2-->
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <h3><a href="mouse.html">Mouse</a></h3>
-        </div>
-    </div>
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="owl-carousel owl-theme">
-                <!-- G502-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/g502hero.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Logitech G502 Hero</span><br>
-                            <span class="price">$<span class="text-center">79.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Rival 310 PUBG-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/rival310pubg.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">SteelSeries Rival 310 PUBG</span><br>
-                            <span class="price">$<span class="text-center">69.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Razer Basilis-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/razer_basiliskess.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Razer Basilisk</span><br>
-                            <span class="price">$<span class="text-center">69.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Rival 650 wireless-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/rival650.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">SteelSeries Rival 650 Wireless</span><br>
-                            <span class="price">$<span class="text-center">119.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--G903 -->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/g903.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Logitech G903 Wireless</span><br>
-                            <span class="price">$<span class="text-center">149.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Razer Atheris-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/atheris.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Razer Atheris Wireless</span><br>
-                            <span class="price">$<span class="text-center">49.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Razer DVA-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/mouse/razer-dva-abyssus.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Razer D.VA Abysssus Elite </span><br>
-                            <span class="price">$<span class="text-center">58.78</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--Product Slider 3-->
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <h3><a href="headphone.html">Headphone</a></h3>
-        </div>
-    </div>
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="owl-carousel owl-theme">
-                <!-- Arctis 3-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/arctis-3-red.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">SteelSeries Arctis 3 Red Solar</span><br>
-                            <span class="price">$<span class="text-center">67.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--G433-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/g433.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Logitech G433</span><br>
-                            <span class="price">$<span class="text-center">99.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Arctis 7-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/arctis-7-wireless.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">SteelSeries Arctis 7 Black</span><br>
-                            <span class="price">$<span class="text-center">149.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Fusion 300 -->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/rog-strix-fusion-300.jpg" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">ROG Strix Fusion 300 </span><br>
-                            <span class="price">$<span class="text-center">99.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--G933-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/g933.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">Logitech G933</span><br>
-                            <span class="price">$<span class="text-center">199.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!--Fusion wireless-->
-                <div class="item">
-                    <div class="card">
-                        <img src="images/product-slider/headphone/rog-fusion-wireless.png" alt="img" class="card-img-top">
-                        <div class="card-body">
-                            <span class="product-title">ROG Strix Fusion 700 Wireless</span><br>
-                            <span class="price">$<span class="text-center">219.99</span></span><br>
-                            <button class="btn btn-secondary btn-sm btn-add">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                    }
+                ?>
             </div>
         </div>
     </div>
     <br><br><br>
+
     <!-- Suppliers-Title -->
     <div class="cotainer-fluid padding">
         <div class="row welcome text-center">
@@ -409,7 +183,9 @@
             </div>
         </div>
     </div>
+
     <br><br><br>
+    
     <!-- Footer -->
     <footer>
         <div class="footer-top">
@@ -443,10 +219,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p><a class="scroll-link" href="index.html">Home</a></p>
-                                <p><a href="keyboard.html">Keyboard</a></p>
-                                <p><a href="#">Mouse</a></p>
-                                <p><a href="#">Headphone</a></p>
+                                <p><a class="scroll-link" href="index.php">Home</a></p>
+                                <p><a href="keyboard.php">Keyboard</a></p>
                             </div>
                         </div>
                     </div>
@@ -531,5 +305,8 @@
             },500)
         });
     </script>
+    <?php 
+        $conn->close();
+    ?>
 </body>
 </html>

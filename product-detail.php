@@ -1,3 +1,14 @@
+<?php
+
+require_once("config/config.php");
+if (!isset($_GET["MaSP"])) die("Loi !!!");
+
+$sql = "SELECT * FROM product WHERE MaSP=".$_GET['MaSP'];;
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,14 +36,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
-        <a class="navbar-brand" href="index.html"><img src="images/core-img/1x/logo_1.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="images/core-img/1x/logo_1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <!-- Drop down keyboard-->
                 <li class="nav-item dropdown">
@@ -40,41 +51,16 @@
                     Keyboard
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="keyboard_razer.html">Razer</a>
-                        <a class="dropdown-item" href="keyboard_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="keyboard_leopold.html">Leopold</a>
+                        <a class="dropdown-item" href="keyboard_razer.php">Razer</a>
+                        <a class="dropdown-item" href="keyboard_corsair.php">Corsair</a>
+                        <a class="dropdown-item" href="keyboard_leopold.php">Leopold</a>
                         <!-- <div class="dropdown-divider">Leopold</div>
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
-                <!-- Drop down mouse-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mouse
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mouse_asus.html">Asus</a>
-                        <a class="dropdown-item" href="mouse_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="mouse_zowie.html">Zowie</a>
-                        <!--<div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
-                <!-- Drop down headphone-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Headphone
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="headphone_asus.html">Asus</a>
-                        <a class="dropdown-item" href="headphone_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="headphone_hyperxhtml">HyperX</a>
-                        <!-- <div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
+                
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html" id="cart-icon">
+                    <a class="nav-link" href="cart.php" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="itemCount" data-count="0">0</span>
                     </a>
@@ -89,22 +75,36 @@
         </div>
     </nav>
 
-
+    <?php
+        while ($row = $result->fetch_assoc()){
+            $imagelinks = explode(" , ",$row["CacHinhAnh"]);
+            
+    ?>
     <div class="container" id="content">
+        
         <div id="left">
             <div class="fotorama"data-nav="thumbs" data-autoplay="3000">
-                    <a href="images/product-slider/keyboard/leopold_fc980mpd_bluefont_weba.jpg"><img src="images/product-slider/keyboard/leopold_fc980mpd_bluefont_weba.jpg" id="test"></a>
-                    <a href="images/product-slider/keyboard/corsair_k70mk2se.png"><img src="images/product-slider/keyboard/corsair_k70mk2se.png"></a>
-                </div>
+            <?php
+                foreach ($imagelinks as $link){
+            ?>
+                <a href="<?php echo $link; ?>"><img src="<?php echo $link; ?>" id="test"></a>
+            <?php
+                }
+            ?>
+            </div>
         </div>
+            
         <div id="right">
-                <h3 id="product-title">Corsair K70 MK2.SE</h3>
+                <h3 id="product-title"><?php echo $row["TenSP"]; ?></h3>
                 <h6 id="nsx">Corsair</h6>
                 <h6 id="Waranty"> Waranty: 24 months</h6>
-                <h6>Price: <span>$</span>70</h6>
+                <h6>Price: </span><?php echo $row["GiaDonVi"]; ?></h6>
                 <button class="btn btn-secondary btn-sm">Add to cart</button>
         </div>
     </div>
+    <?php
+        }
+    ?>
     <!--
     <div class="container">
         <div class="row">
@@ -158,10 +158,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p><a class="scroll-link" href="index.html">Home</a></p>
-                                <p><a href="keyboard.html">Keyboard</a></p>
-                                <p><a href="#">Mouse</a></p>
-                                <p><a href="#">Headphone</a></p>
+                                <p><a class="scroll-link" href="index.php">Home</a></p>
+                                <p><a href="keyboard.php">Keyboard</a></p>
                             </div>
                         </div>
                     </div>
@@ -206,4 +204,8 @@
         })
     </script>
 </body>
+<?php
+}
+$conn->close();
+?>
 </html>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once("config/config.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,32 +53,7 @@
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
-                <!-- Drop down mouse-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mouse
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mouse_asus.html">Asus</a>
-                        <a class="dropdown-item" href="mouse_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="mouse_zowie.html">Zowie</a>
-                        <!--<div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
-                <!-- Drop down headphone-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Headphone
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="headphone_asus.html">Asus</a>
-                        <a class="dropdown-item" href="headphone_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="headphone_hyperxhtml">HyperX</a>
-                        <!-- <div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
+                
                 <li class="nav-item active">
                     <a class="nav-link" href="cart.html" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
@@ -90,6 +71,7 @@
     </nav>
 
     <div class="container-fluid">
+        <form action="">
         <table id="cart" class="table table-hover table-condensed">
             <thead>
                 <tr>
@@ -127,13 +109,14 @@
                     <td class="text-center"><strong>Total</strong></td>
                 </tr>
                 <tr>
-                    <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                    <td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
                     <td colspan="2" class="hidden-xs"></td>
                     <td class="hidden-xs text-center"><strong>Total $199.99</strong></td>
                     <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
                 </tr>
             </tfoot>
-        </table>
+        </table></form>
+        
     </div>
    
     <br><br><br>
@@ -172,8 +155,6 @@
                             <div class="col-md-6">
                                 <p><a class="scroll-link" href="#top-content">Home</a></p>
                                 <p><a href="#">Keyboard</a></p>
-                                <p><a href="#">Mouse</a></p>
-                                <p><a href="#">Headphone</a></p>
                             </div>
                         </div>
                     </div>

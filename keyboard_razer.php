@@ -1,3 +1,7 @@
+<?php
+    require_once("config/config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,14 +29,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
-        <a class="navbar-brand" href="index.html"><img src="images/core-img/1x/logo_1.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="images/core-img/1x/logo_1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <!-- Drop down keyboard-->
                 <li class="nav-item dropdown">
@@ -40,41 +44,16 @@
                     Keyboard
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="keyboard_razer.html">Razer</a>
-                        <a class="dropdown-item" href="keyboard_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="keyboard_leopold.html">Leopold</a>
+                        <a class="dropdown-item" href="keyboard_razer.php">Razer</a>
+                        <a class="dropdown-item" href="keyboard_corsair.php">Corsair</a>
+                        <a class="dropdown-item" href="keyboard_leopold.php">Leopold</a>
                         <!-- <div class="dropdown-divider">Leopold</div>
                         <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
-                <!-- Drop down mouse-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mouse
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mouse_asus.html">Asus</a>
-                        <a class="dropdown-item" href="mouse_logitech.html">Logitech</a>
-                        <a class="dropdown-item" href="mouse_zowie.html">Zowie</a>
-                        <!--<div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
-                <!-- Drop down headphone-->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Headphone
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="headphone_asus.html">Asus</a>
-                        <a class="dropdown-item" href="headphone_corsair.html">Corsair</a>
-                        <a class="dropdown-item" href="headphone_hyperxhtml">HyperX</a>
-                        <!-- <div class="dropdown-divider">Logitech</div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
-                    </div>
-                </li>
+                
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html" id="cart-icon">
+                    <a class="nav-link" href="cart.php" id="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="itemCount" data-count="0">0</span>
                     </a>
@@ -97,11 +76,11 @@
                 <div class="main-content">
                     <div id="breadcrumb">
                         <span class="showHere">You're at: </span>
-                        <a href="index.html" class="pathway">Homepage</a>
+                        <a href="index.php" class="pathway">Homepage</a>
                         <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard.html" class="pathway">Keyboard</a>
+                        <a href="keyboard.php" class="pathway">Keyboard</a>
                         <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard_razer.html" class="pathway">Razer Keyboard</a>
+                        <a href="keyboard_razer.php" class="pathway">Razer Keyboard</a>
                     </div>
                     <div class="col-md-12">
                         <div class="browse-tag spull-right">
@@ -118,7 +97,7 @@
                     <div class="col-md-12 product-list">
                         <div class="row content-product-list">
                             <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/Huntmans/1.jpg">
+                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow elite/1.jpg">
                                 <div class="card-body">
                                     <h4 class="card-title-gear">RAZER HUNTSMAN ELITE</h4>
                                     <p class="card-text"> </p>
@@ -127,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/BW-Chroma-v2/1.png">
+                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow x chroma mercury edition/1.jpg">
                                 <div class="card-body">
                                     <h4 class="card-title-gear">RAZER BLACKWIDOW CHROMA VER 2</h4>
                                     <p class="card-text"> </p>
@@ -137,47 +116,11 @@
                             </div>
 
                             <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/BW-TE-X-Chroma-v2-Pink/1.jpg">
+                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow tournament edition quat pink/1.jpg">
                                 <div class="card-body">
                                     <h4 class="card-title-gear">RAZER BWT X CHROMA V2 QUARTZ</h4>
                                     <p class="card-text"> </p>
                                     <h5>$149.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/BW-TE-X-Chroma-v2/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BLACKWIDOW TOURNAMENT X CHROMA V2</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$139.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/BW-Ultimate-2016/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BLACKWIDOW ULITMATE 2016</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$109.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/BW-X-Chroma/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BLACKWIDOW X CHROMA V2</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$149.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/Ornata Chroma/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BLACKWIDOW ULTIMATE 2013</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$89.99</h5>
                                     <a href="#" class="btn btn-outline-secondary">Add to cart </a>
                                 </div>
                             </div>
@@ -224,8 +167,6 @@
                             <div class="col-md-6">
                                 <p><a class="scroll-link" href="#top-content">Home</a></p>
                                 <p><a href="#">Keyboard</a></p>
-                                <p><a href="#">Mouse</a></p>
-                                <p><a href="#">Headphone</a></p>
                             </div>
                         </div>
                     </div>
