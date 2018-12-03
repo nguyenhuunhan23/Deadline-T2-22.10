@@ -69,67 +69,61 @@
     </nav>
 
      <!-- Breadcrumb -->
-     <div id="collection" class="container-fluid">
-        <div class="col-sm-12">
-            <h3 class="title-box-collection"> Razer Keyboard</h3>
-            <div class="row">
-                <div class="main-content">
-                    <div id="breadcrumb">
-                        <span class="showHere">You're at: </span>
-                        <a href="index.php" class="pathway">Homepage</a>
-                        <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard.php" class="pathway">Keyboard</a>
-                        <span><i class="fa fa-caret-right"></i></span>
-                        <a href="keyboard_razer.php" class="pathway">Razer Keyboard</a>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="browse-tag spull-right">
-                            <span>Sort</span>
-                            <select class="sort-by custom-dropdown_select custom-dropdown_select--white">
-                                <option value="manual">Featured products</option>
-                                <option value="manual">Low to High</option>
-                                <option value="manual">High to Low</option>
-                            </select>
+     <<div id="collection" class="container-fluid">
+            <div class="col-sm-12">
+                <h3 class="title-box-collection"> Corsair Keyboard</h3>
+                <div class="row">
+                    <div class="main-content">
+                        <div id="breadcrumb">
+                            <span class="showHere">You're at: </span>
+                            <a href="index.php" class="pathway">Homepage</a>
+                            <span><i class="fa fa-caret-right"></i></span>
+                            <a href="keyboard.php" class="pathway">Keyboard</a>
+                            <span><i class="fa fa-caret-right"></i></span>
+                            <a href="keyboard_corsair.php" class="pathway">Razer Keyboard</a>
                         </div>
-                    </div>
-                    <br>
-                    <!-- Product List -->
-                    <div class="col-md-12 product-list">
-                        <div class="row content-product-list">
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow elite/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER HUNTSMAN ELITE</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
+                        <div class="col-md-12">
+                            <div class="browse-tag spull-right">
+                                <span>Sort</span>
+                                <select class="sort-by custom-dropdown_select custom-dropdown_select--white">
+                                    <option value="manual">Featured products</option>
+                                    <option value="manual">Low to High</option>
+                                    <option value="manual">High to Low</option>
+                                </select>
                             </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow x chroma mercury edition/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BLACKWIDOW CHROMA VER 2</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$169.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                <img class="card-img-top" src="images/product-img/keyboard/Razer/razer blackwidow tournament edition quat pink/1.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">RAZER BWT X CHROMA V2 QUARTZ</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$149.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary">Add to cart </a>
-                                </div>
+                        </div>
+                        <br>
+                        <?php 
+                            $sql = "SELECT * FROM product WHERE MaLoai=1 AND MaNPP=5";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                        ?>
+                        <!-- Product List -->
+                        <div class="col-md-12 product-list">
+                            <div class="row content-product-list">
+                                <?php
+                                    while ($row = $result->fetch_assoc()){
+                                        $imagelinks = explode(" , ",$row["CacHinhAnh"]);
+                                ?>
+                                <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
+                                    <a href="product-detail.php?MaSP=<?php echo $row["MaSP"]; ?>"><img class="card-img-top" src="<?php echo $imagelinks[0]; ?>"></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title-gear"><?php echo $row["TenSP"]; ?></h4>
+                                        <p class="card-text"> </p>
+                                        <h5><?php echo $row["GiaDonVi"]; ?></h5>
+                                        <a href="#" class="btn btn-outline-secondary">Add to cart </a>
+                                    </div>
+                                </div>>
+                                <?php
+                                    }
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
    
     <br><br><br>
     <!-- Footer -->

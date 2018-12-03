@@ -94,65 +94,31 @@
                         </div>
                     </div>
                     <br>
+                    <?php 
+                        $sql = "SELECT * FROM product WHERE MaLoai=1 AND MaNPP=3";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                    ?>
                     <!-- Product List -->
                     <div class="col-md-12 product-list">
                         <div class="row content-product-list">
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc660m-PD/fc660m.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC600M-PD Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add btn-add">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc750r-PD/fc750r-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC750R-PD Blue Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add">Add to cart </a>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc900r-PD/fc900r-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC900R-PD White Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc980M/fc980m.png">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC600M-PD Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc980m-PD/fc980m-pd.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC980M-PD Blue Grey</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add">Add to cart </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
-                                <img class="card-img-top" src="images/product-img/keyboard/Leopold/fc660c/fc660c.jpg">
-                                <div class="card-body">
-                                    <h4 class="card-title-gear">Leopold FC660c Black Case</h4>
-                                    <p class="card-text"> </p>
-                                    <h5>$199.99</h5>
-                                    <a href="#" class="btn btn-outline-secondary btn-add">Add to cart </a>
-                                </div>
-                            </div>
-
+                        <?php
+                                    while ($row = $result->fetch_assoc()){
+                                        $imagelinks = explode(" , ",$row["CacHinhAnh"]);
+                                ?>
+                                <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
+                                <a href="product-detail.php?MaSP=<?php echo $row["MaSP"]; ?>"><img class="card-img-top" src="<?php echo $imagelinks[0]; ?>"></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title-gear"><?php echo $row["TenSP"]; ?></h4>
+                                        <p class="card-text"> </p>
+                                        <h5><?php echo $row["GiaDonVi"]; ?></h5>
+                                        <a href="#" class="btn btn-outline-secondary">Add to cart </a>
+                                    </div>
+                                </div>>
+                                <?php
+                                    }
+                                    }
+                                ?>
                         </div>
                     </div>
                 </div>

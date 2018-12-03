@@ -105,8 +105,8 @@
                                     while ($row = $result->fetch_assoc()){
                                         $imagelinks = explode(" , ",$row["CacHinhAnh"]);
                                 ?>
-                                <div class="col-sm-3 col-xs-12 padding-none col-fix20">
-                                    <img class="card-img-top" src="<?php echo $imagelinks[0]; ?>">
+                                <div class="col-sm-3 col-xs-12 padding-none col-fix20 card-index">
+                                <a href="product-detail.php?MaSP=<?php echo $row["MaSP"]; ?>"><img class="card-img-top" src="<?php echo $imagelinks[0]; ?>"></a>
                                     <div class="card-body">
                                         <h4 class="card-title-gear"><?php echo $row["TenSP"]; ?></h4>
                                         <p class="card-text"> </p>
@@ -116,9 +116,7 @@
                                 </div>>
                                 <?php
                                     }
-                                    } else {
-
-                                    } 
+                                    }
                                 ?>
                             </div>
                         </div>
