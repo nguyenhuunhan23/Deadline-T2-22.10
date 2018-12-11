@@ -33,6 +33,32 @@ if ($result->num_rows > 0) {
     <script src="js/fotorama.js"></script>
     <!-- Scripts -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.btn-add').click(function(){
+                var product_id = $(this).attr("id");
+                var product_name = $('#TenSP'+product_id+'').val();
+                var product_price = $('#GiaDonVi'+product_id+'').val();
+                var product_image = $('#HinhDaiDien'+product_id+'').val();
+                var product_quantity = 1;
+                var action = "add";
+                if(product_quantity > 0)
+                {
+                    $.ajax({
+                        url:"action.php",
+                        method:"POST",
+                        data:{MaSP:product_id, TenSP:product_name, GiaDonVi:product_price, SoLuong:product_quantity, action:action, HinhDaiDien:product_image},
+                        success:function(data)
+                        {
+                            alert("Item has been Added into Cart");
+                        }
+                    });
+                }	
+	        });
+        })
+    
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
@@ -76,8 +102,8 @@ if ($result->num_rows > 0) {
     </nav>
 
     <?php
-        while ($row = $result->fetch_assoc()){
-            $imagelinks = explode(" , ",$row["CacHinhAnh"]);
+        while ($product = $result->fetch_assoc()){
+            $imagelinks = explode(" , ",$product["CacHinhAnh"]);
             
     ?>
     <div class="container" id="content">
@@ -95,11 +121,15 @@ if ($result->num_rows > 0) {
         </div>
             
         <div id="right">
-                <h3 id="product-title"><?php echo $row["TenSP"]; ?></h3>
+                <h3 id="product-title"><?php echo $product["TenSP"]; ?></h3>
                 <h6 id="nsx">Corsair</h6>
                 <h6 id="Waranty"> Waranty: 24 months</h6>
-                <h6>Price: </span><?php echo $row["GiaDonVi"]; ?></h6>
-                <button class="btn btn-secondary btn-sm">Add to cart</button>
+                <h6>Price: </span><?php echo $product["GiaDonVi"]; ?></h6>
+                <a href="" class="btn btn-secondary btn-sm btn-add" id="<?php echo $product['MaSP']?>">Add to cart
+                    <input type="hidden" name="TenSP" id="TenSP<?php echo $product['MaSP']; ?>" value="<?php echo $product["TenSP"]; ?>">
+                    <input type="hidden" name="GiaDonVi" id="GiaDonVi<?php echo $product['MaSP']; ?>" value="<?php echo $product["GiaDonVi"]; ?>">
+                    <input type="hidden" name="HinhDaiDien" id="HinhDaiDien<?php echo $product['MaSP']; ?>" value="<?php echo $imagelinks[0]; ?>">
+                </a>
         </div>
     </div>
     <?php
@@ -107,7 +137,7 @@ if ($result->num_rows > 0) {
     ?>
     <!--
     <div class="container">
-        <div class="row">
+        <div class="product">
             <div class="col-sm-6 col-xs-12 product_thumbnail">
                 <div class="fotorama"data-nav="thumbs" data-autoplay="3000">
                     <a href="test.png"><img src="test.png" id="test"></a>
@@ -129,7 +159,7 @@ if ($result->num_rows > 0) {
     <footer>
         <div class="footer-top">
             <div class="container-fluid">
-                <div class="row" id="footer-row">
+                <div class="product" id="footer-product">
                     <div class="col-md-3 footer-about wow fadeInUp">
                         <img class="logo-footer" src="images/core-img/1x/test13_1.png" alt="logo-footer" data-at2x="assets/img/logo.png">
                         <p>
@@ -151,12 +181,12 @@ if ($result->num_rows > 0) {
                         <p><i class="fas fa-envelope"></i> Email: <a href="#">gearnation@gmail.com</a></p>
                     </div>
                     <div class="col-md-4 footer-links wow fadeInUp">
-                        <div class="row">
+                        <div class="product">
                             <div class="col">
                                 <h3>Links</h3>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="product">
                             <div class="col-md-6">
                                 <p><a class="scroll-link" href="index.php">Home</a></p>
                                 <p><a href="keyboard.php">Keyboard</a></p>
@@ -168,7 +198,7 @@ if ($result->num_rows > 0) {
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
+                <div class="product">
                     <div class="col-md-6 footer-copyright">
                         &copy; CopyRight <a href="#">GEAR NATION</a>
                     </div>
